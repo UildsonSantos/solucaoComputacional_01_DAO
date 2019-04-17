@@ -49,7 +49,7 @@ public class ClienteDAO {
             prepStmt.setString(i++, clienteDTO.getTelefone());
             prepStmt.setInt(i++, clienteDTO.getIdade());
             prepStmt.setDouble(i++, clienteDTO.getLimiteCredito());
-            prepStmt.setString(6, clienteDTO.getPais().getSigla());
+            prepStmt.setString(i++, clienteDTO.getPais().getSigla());
 
             int rowsInserted = prepStmt.executeUpdate();
             if (rowsInserted > 0) {
